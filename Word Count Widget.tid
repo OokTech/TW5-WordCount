@@ -1,0 +1,110 @@
+tags:
+title: $:/plugins/inmysocks/WordCount/Word Count Widget
+
+This is a widget that will display the number of words or characters in a tiddler or text string given to it.
+
+Widget tiddler: [[$:/plugins/inmysocks/WordCount/word-count.js]]
+
+Remember you have to save and reload your wiki before the widget will work.
+
+|!Parameter |!Description |
+|mode |This can be set to `word` or `character` and will count either words or characters, defaults to `word` |
+|tiddler |The tiddler with the text to process (defauts to `currentTiddler`) |
+|field |The field with the text to process (defaults to the text field) |
+|text |A text string for the widget to count, if this is given it overrides the `tiddler` and `field` inputs. |
+|colors |(Optional) An input that sets text color when the count reaches a certain number. See the examples below. |
+|colorState |(Optional) The name of a state tiddler to use to store the current text color so it can be used to set the color of more than just the displayed number. |
+
+!!Usage
+
+!!!Count the number of words in a string:
+
+```
+<$word-count text='some text string'/>
+```
+
+<$word-count
+    text='some text string'
+/>
+
+!!!Count the number of characters in a string:
+
+```
+<$word-count text='some text string' mode=character/>
+```
+
+<$word-count
+    text='some text string'
+    mode=character
+/>
+
+!!!Count the number of words in a field:
+
+```
+<$word-count tiddler='Word Count Widget' field='title' mode=word/>
+```
+
+<$word-count
+    tiddler='Word Count Widget'
+    field='title'
+    mode=word
+/>
+
+!!!Using the colors parameter:
+
+This uses the `colorState` tiddler.
+
+```
+<$word-count tiddler='$:/temp/Word Count Widget' mode=character colors='#f0f:10,indianred:100,red:122' colorState='$:/state/Word Count Widget/color'/>
+```
+
+<$word-count
+    tiddler='$:/temp/Word Count Widget'
+    mode=character
+    colors='#f0f:10,indianred:100,red:122'
+    colorState='$:/state/Word Count Widget/color'
+/>
+
+Edit the field here:
+<$edit-text
+    tiddler='$:/temp/Word Count Widget'
+    class='tc-edit-texteditor'
+/>
+
+Contents of the color state tiddler:
+
+<$view
+    tiddler='$:/state/Word Count Widget/color'
+/>
+
+!!!Change colors of text as the number of characters in a field changes:
+
+At the moment the input field loses focus every time the color changes.
+
+```
+<$word-count tiddler='$:/temp/Word Count Widget' mode=character colors='#f0f:10,indianred:100,red:122' colorState='$:/state/Word Count Widget/color'/>
+```
+
+<$word-count
+    tiddler='$:/temp/Word Count Widget'
+    mode=character
+    colors='#f0f:10,indianred:100,red:122'
+    colorState='$:/state/Word Count Widget/color'
+/>
+
+Edit the field here:
+<$set
+    name=CurrentColor
+    value={{$:/state/Word Count Widget/color}}
+>
+    <$edit-text
+        tiddler='$:/temp/Word Count Widget'
+        class='tc-edit-texteditor change-color'
+    />
+</$set>
+
+Contents of the color state tiddler:
+
+<$view
+    tiddler='$:/state/Word Count Widget/color'
+/>

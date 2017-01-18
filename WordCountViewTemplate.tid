@@ -1,0 +1,21 @@
+list-after: $:/core/ui/ViewTemplate/tags
+tags: $:/tags/ViewTemplate
+title: $:/plugins/inmysocks/WordCount/WordCountViewTemplate
+
+<$reveal
+    type='match'
+    state='$:/settings/inmysocks/WordCount!!enable_view_mode'
+    text=true
+>
+    <$list
+        filter='[is[current]has[text]]'
+        emptyMessage="Word Count: 0"
+    >
+        Word Count:
+        <$word-count
+            tiddler=<<currentTiddler>>
+            field='text'
+            mode=word
+        />
+    </$list>
+</$reveal>

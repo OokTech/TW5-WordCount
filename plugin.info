@@ -1,0 +1,7 @@
+{
+	"title": "$:/plugins/inmysocks/WordCount",
+	"description": "Word count in tiddlers",
+	"author": "Jed Carty",
+	"core-version": ">=5.1.9",
+	"plugin-type": "plugin"
+}

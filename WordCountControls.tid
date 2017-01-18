@@ -1,0 +1,24 @@
+caption: ~WordCount
+tags: $:/tags/ControlPanel
+title: $:/plugins/inmysocks/WordCount/WordCountControls
+
+<$checkbox
+    tiddler='$:/settings/inmysocks/WordCount'
+    field='enable_edit_view'
+    checked=true
+    unchecked=false
+    default=true
+>
+    Enable ~WordCount in edit mode
+</$checkbox>
+<br>
+<$checkbox
+    tiddler='$:/settings/inmysocks/WordCount'
+    field='enable_view_mode'
+    checked=true
+    unchecked=false
+    default=false
+>
+    Enable ~WordCount in view mode
+</$checkbox>
+(This counts words in the raw text field, so wikitext that isn't visible in the view template is still counted. I may change this later.)

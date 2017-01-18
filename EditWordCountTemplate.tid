@@ -1,0 +1,21 @@
+list-after: $:/core/ui/EditTemplate/tags
+tags: $:/tags/EditTemplate
+title: $:/plugins/inmysocks/WordCount/EditWordCountTemplate
+
+<$reveal
+    type='nomatch'
+    state='$:/settings/inmysocks/WordCount!!enable_edit_view'
+    text=false
+>
+    <$list
+        filter='[is[current]has[text]]'
+        emptyMessage="Word Count: 0"
+    >
+        Word Count:
+        <$word-count
+            tiddler=<<currentTiddler>>
+            field='text'
+            mode=word
+        />
+    </$list>
+</$reveal>

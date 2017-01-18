@@ -1,0 +1,8 @@
+tags:
+title: $:/plugins/inmysocks/WordCount/ReadMe
+
+This plugin contains the [[word-count widget|$:/plugins/inmysocks/WordCount/WordCountControls]] and some templates that display the number of words in a tiddler. The value isn't updaded while you type, but if you pause for a moment it will update. You can make something that updates as you type but there are some severe performance penalties from that.
+
+To use this just import the plugin into your wiki, save and restart. Settings are in the ~WordCount tab in the control panel. This tab is added as part of the plugin.
+
+See [[Word Count Widget|$:/plugins/inmysocks/WordCount/Word Count Widget]] for more documentation.
