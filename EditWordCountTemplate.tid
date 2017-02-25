@@ -1,10 +1,10 @@
 list-after: $:/core/ui/EditTemplate/tags
 tags: $:/tags/EditTemplate
-title: $:/plugins/inmysocks/WordCount/EditWordCountTemplate
+title: $:/plugins/OokTech/WordCount/EditWordCountTemplate
 
 <$reveal
     type='nomatch'
-    state='$:/settings/inmysocks/WordCount!!enable_edit_view'
+    state='$:/settings/OokTech/WordCount!!enable_edit_view'
     text=false
 >
     <$list

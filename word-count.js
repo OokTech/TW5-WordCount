@@ -1,9 +1,5 @@
-module-type: widget
-title: $:/plugins/inmysocks/WordCount/word-count.js
-type: application/javascript
-
 /*\
-title: $:/widgets/inmysocks/word-count.js
+title: $:/widgets/OokTech/WordCount/word-count.js
 type: application/javascript
 module-type: widget
 
@@ -47,8 +43,6 @@ WordCount.prototype.render = function(parent,nextSibling) {
 	this.computeAttributes();
 	this.execute();
 	var textNode = this.document.createTextNode(this.currentCount);
-	/*parent.insertBefore(textNode,nextSibling);
-	this.domNodes.push(textNode);*/
 	var domNode = this.document.createElement("span");
 	parent.insertBefore(domNode,nextSibling);
 	this.renderChildren(domNode,null);

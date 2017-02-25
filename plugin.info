@@ -1,5 +1,5 @@
 {
-	"title": "$:/plugins/inmysocks/WordCount",
+	"title": "$:/plugins/OokTech/WordCount",
 	"description": "Word count in tiddlers",
 	"author": "Jed Carty",
 	"core-version": ">=5.1.9",

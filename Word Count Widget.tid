@@ -1,9 +1,9 @@
 tags:
-title: $:/plugins/inmysocks/WordCount/Word Count Widget
+title: $:/plugins/OokTech/WordCount/Word Count Widget
 
 This is a widget that will display the number of words or characters in a tiddler or text string given to it.
 
-Widget tiddler: [[$:/plugins/inmysocks/WordCount/word-count.js]]
+Widget tiddler: [[$:/plugins/OokTech/WordCount/word-count.js]]
 
 Remember you have to save and reload your wiki before the widget will work.
 

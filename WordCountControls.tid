@@ -1,9 +1,9 @@
 caption: ~WordCount
 tags: $:/tags/ControlPanel
-title: $:/plugins/inmysocks/WordCount/WordCountControls
+title: $:/plugins/OokTech/WordCount/WordCountControls
 
 <$checkbox
-    tiddler='$:/settings/inmysocks/WordCount'
+    tiddler='$:/settings/OokTech/WordCount'
     field='enable_edit_view'
     checked=true
     unchecked=false
@@ -13,7 +13,7 @@ title: $:/plugins/inmysocks/WordCount/WordCountControls
 </$checkbox>
 <br>
 <$checkbox
-    tiddler='$:/settings/inmysocks/WordCount'
+    tiddler='$:/settings/OokTech/WordCount'
     field='enable_view_mode'
     checked=true
     unchecked=false
