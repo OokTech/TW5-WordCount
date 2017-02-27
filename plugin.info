@@ -1,7 +1,9 @@
 {
 	"title": "$:/plugins/OokTech/WordCount",
 	"description": "Word count in tiddlers",
-	"author": "Jed Carty",
+	"author": "OokTech",
+	"version": "0.0.1",
 	"core-version": ">=5.1.9",
+	"source": "https://github.com/OokTech/TW5-WordCount",
 	"plugin-type": "plugin"
 }
