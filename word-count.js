@@ -82,16 +82,24 @@ WordCount.prototype.execute = function() {
 		if(this.mode === "character") {
 			this.currentCount = this.countText.length.toString();
 		} else {
-			this.currentCount = this.countText.match(/\w+/g).length.toString();
+			if (this.countText.match(/\w+/g)) {
+				this.currentCount = this.countText.match(/\w+/g).length.toString();
+			}
 		}
 	} else {
 		var tiddler = this.wiki.getTiddler(this.tiddler);
 		if(tiddler) {
 			var text = tiddler.getFieldString(this.field);
-			if(this.mode === "word") {
-				this.currentCount = text.match(/\w+/g).length.toString();
-			} else if(this.mode === "character") {
-				this.currentCount = text.length.toString();
+			if (text) {
+				if(this.mode === "word") {
+					if (text.match(/\w+/g)) {
+						this.currentCount = text.match(/\w+/g).length.toString();
+					}
+				} else if(this.mode === "character") {
+					this.currentCount = text.length.toString();
+				} else {
+					this.currentCount = undefined;
+				}
 			} else {
 				this.currentCount = undefined;
 			}

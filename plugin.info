@@ -2,7 +2,7 @@
 	"title": "$:/plugins/OokTech/WordCount",
 	"description": "Word count in tiddlers",
 	"author": "OokTech",
-	"version": "0.0.1",
+	"version": "0.0.5",
 	"core-version": ">=5.1.9",
 	"source": "https://github.com/OokTech/TW5-WordCount",
 	"plugin-type": "plugin"
